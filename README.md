@@ -1,16 +1,31 @@
-# React + Vite
+BuscarFilmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para buscar filmes e séries, consultar detalhes (sinopse, elenco, nota IMDb) e navegar entre páginas de resultados. Projeto criado para aprender, na prática, consumo de APIs REST com React.
 
-Currently, two official plugins are available:
+Deploy: https://buscafilmes-pi.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Funcionalidades:
+- Busca de filmes e séries por título
+- Paginação de resultados
+- Modal com detalhes completos (sinopse, elenco, nota IMDb)
+- Indicador de carregamento
+- Tratamento de erros (ex: filme não encontrado)
+- Layout responsivo (grid adaptável com CSS clamp())
+- Busca via botão ou tecla Enter
+- 
+Tecnologias:
+- React
+- Vite
+- OMDb API
+- CSS puro (Grid, Flexbox, clamp())
+ 
+O que aprendi:
 
-## React Compiler
+- Esse projeto foi minha primeira experiência prática consumindo uma API externa em React. Principais conceitos aplicados:
+- Hooks useState e useEffect
+- Requisições assíncronas com fetch e async/await
+- Renderização condicional e listas dinâmicas
+- Boas práticas de segurança (variáveis de ambiente para chaves de API)
+- Design responsivo sem frameworks CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Feito por Daniel Neves
