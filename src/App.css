@@ -1,0 +1,161 @@
+.header{
+  width: 100%;
+  padding: 20px clamp(16px, 5vw, 50px);
+  background-color: #111;
+}
+
+.header h1{
+  color: #e50914;
+  font-size: 28px;
+}
+
+.search-area{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 20px;
+}
+
+.search-area input{
+  width: min(500px, 70%);
+  padding: 14px 18px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-area button{
+  padding: 14px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.movies-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 20vw, 280px), 1fr));
+  gap: 20px;
+  padding: 20px 50px;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.movie-card{
+  background-color: #1f1f1f;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  background-color: #1f1f1f;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover{
+  transform: scale(1.05);
+}
+
+.movie-info{
+  padding: 12px;
+}
+
+.movie-info h3{
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.movie-info p{
+  color: #aaa;
+  font-size: 14px;
+}
+
+.empty-state{
+  text-align: center;
+  padding: 60px, 20px;
+  color: #888;
+}
+
+.empty-state p{
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.empty-state span{
+  font-size: 14px;
+}
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content{
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content p{
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.paginacao{
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.paginacao button{
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e50914;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.paginacao button:hover{
+  background-color: #b8070f;
+}
+
+.paginacao button:disabled{
+  background-color: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.paginacao span{
+  color: #ccc;
+  font-size: 15px;
+}
+
