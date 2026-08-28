@@ -13,7 +13,7 @@ function App() {
 
   async function buscarFilmes() {
     setLoading(true)
-    const resposta = await fetch(`https://www.omdbapi.com/?apikey=8623968s=${search}&page=${pag}`)
+    const resposta = await fetch(`https://www.omdbapi.com/?apikey=8623968&&s=${search}&page=${pag}`)
     const dados = await resposta.json()
     if (dados.Response === "False"){
       setErro(dados.Error)
@@ -28,7 +28,7 @@ function App() {
   }
 
   async function verDetalhes(imdbID){
-    const resposta = await fetch(`https://www.omdbapi.com/?apikey=8623968=${imdbID}`)
+    const resposta = await fetch(`https://www.omdbapi.com/?apikey=8623968&i=${imdbID}`)
     const dados = await resposta.json()
     setDetalhes(dados)
   }
